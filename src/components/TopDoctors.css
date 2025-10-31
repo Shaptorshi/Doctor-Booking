@@ -1,0 +1,105 @@
+.top-doctors {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #222;
+}
+
+.top-doctors h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.top-doctors p {
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.doctor-card {
+  border: 1px solid #e0e7ff;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #f0f7ff;
+}
+
+.doctor-info {
+  padding: 1rem;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.status span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status.available span {
+  background-color: #22c55e;
+}
+
+.status.unavailable span {
+  background-color: #9ca3af;
+}
+
+.status.available p {
+  color: #22c55e;
+}
+
+.status.unavailable p {
+  color: #9ca3af;
+}
+
+.doctor-info h3 {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.speciality {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.more-btn {
+  background: #f0f7ff;
+  color: #333;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 50px;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.more-btn:hover {
+  background: #007bff;
+  color: #fff;
+}
