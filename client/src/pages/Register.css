@@ -1,0 +1,109 @@
+/* Main container */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Register box */
+.register-box {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+/* Back link */
+.back-link {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  text-decoration: none;
+  color: #0078ff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+.title {
+  color: #333;
+  font-size: 26px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* Form styling */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.register-form label {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.register-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 14px;
+  transition: 0.3s;
+  width: 95%;
+}
+
+.register-form input:focus {
+  border-color: #0078ff;
+  outline: none;
+}
+
+/* Button */
+.register-btn {
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #005fcc;
+}
+
+/* Login text */
+.login-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+.login-text a {
+  color: #0078ff;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}

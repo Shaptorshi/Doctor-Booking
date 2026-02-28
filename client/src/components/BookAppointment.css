@@ -1,0 +1,60 @@
+.appointment {
+  background: linear-gradient(135deg, #0078ff, #00b4ff);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  margin: 0;
+}
+
+.appointment-content {
+  max-width: 900px;
+}
+
+.appointment-heading {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+}
+
+.appointment-subtitle {
+  font-size: 17px;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.start-btn {
+  display: inline-block;
+  background: white;
+  color: #0078ff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background: #e9f4ff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .appointment-heading {
+    font-size: 26px;
+  }
+
+  .appointment-subtitle {
+    font-size: 15px;
+  }
+}
