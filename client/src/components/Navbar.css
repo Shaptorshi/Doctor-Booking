@@ -125,6 +125,13 @@
 .logout-btn:hover {
   background-color: #ffeaea;
 }
+.hamburger-btn{
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1500;
+}
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
@@ -164,10 +171,22 @@
   }
 
   .navbar-links {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%; /* hidden by default */
+    width: 250px;
+    height: 100vh;
+    background: #fff;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
+    padding: 60px 20px;
+    gap: 20px;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  .navbar-links.open{
+    right: 0;
   }
 
   .navbar-right {

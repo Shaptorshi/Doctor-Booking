@@ -39,7 +39,7 @@ const Navbar = () => {
       </button>
 
       {/* Links */}
-      <div className={`navbar-links ${isSidebarOpen ? 'open' : ''}`}>
+      <div className={`navbar-links ${isSidebarOpen ?'open':'' }` }>
         <NavLink to="/" className="nav-item" onClick={() => setIsSidebarOpen(false)}>
           <Home size={18} /> Home
         </NavLink>
