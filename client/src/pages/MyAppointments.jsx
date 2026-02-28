@@ -21,7 +21,7 @@ const MyAppointments = () => {
     const fetchAppointments = async () => {
       try {
         const res = await fetch(
-          `http://localhost:3000/api/bookings/${loggedUser.email}`
+          `${import.meta.env.VITE_BACKEND_URL}/api/bookings/${loggedUser.email}`
         );
         const data = await res.json();
 
@@ -50,7 +50,7 @@ const MyAppointments = () => {
   const handleCancel = async (id) => {
     if (!window.confirm("Are you sure you want to cancel this appointment?")) return;
     try {
-      const response = await fetch(`http://localhost:3000/api/bookings/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/bookings/${id}`, {
         method: "DELETE"
       })
 
