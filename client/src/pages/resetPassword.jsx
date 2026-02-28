@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import './ResetPassword.css';
+import './resetPassword.css';
 
 const ResetPassword = () => {
   return (
