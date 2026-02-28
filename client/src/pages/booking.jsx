@@ -15,7 +15,7 @@ const BookAppointment = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleSelectDoctor = (doctor) => {
-  localStorage.getItem("selectedDoctor", JSON.stringify(doctor));
+  localStorage.setItem("selectedDoctor", JSON.stringify(doctor));
 }
 
 
@@ -127,7 +127,7 @@ const BookAppointment = () => {
           required
         />
 
-        <button type="submit" onClick={handleSelectDoctor(formData)}>Book Appointment</button>
+        <button type="submit">Book Appointment</button>
       </form>
     </div>
   );
