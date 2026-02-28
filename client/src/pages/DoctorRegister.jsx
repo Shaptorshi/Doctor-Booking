@@ -55,7 +55,7 @@ const DoctorRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/registerDoctor", {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/registerDoctor`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

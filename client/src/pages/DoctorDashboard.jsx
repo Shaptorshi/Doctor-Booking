@@ -23,7 +23,7 @@ const DoctorDashboard = () => {
   const fetchAppointments = async (doctorId) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/registeredDoctor/${doctorId}`
+        `${import.meta.env.VITE_BACKEND_URL}/api/registeredDoctor/${doctorId}`
       );
       const data = await response.json();
       setAppointments(data);

@@ -19,7 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/login', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/login`, {
         method: "POST",
         headers: {
           'Content-Type': "application/json",
@@ -31,7 +31,7 @@ const Login = () => {
       })
       const data = await response.json();
       localStorage.setItem("loggedUser", JSON.stringify({
-        _id:data._id,
+        _id: data._id,
         name: data.name,
         email: data.email,
       }));
@@ -46,27 +46,6 @@ const Login = () => {
       console.log(error);
       window.alert("Error occurred while logging in! Please try again later");
     }
-  }
-  const handleGoogleSuccess = async (credentialResponse) => {
-    const token = credentialResponse.credential;
-    const decoded = jwtDecode(token);
-
-    const response = await fetch('http://localhost:3000/api/google-login', {
-      method: "POST",
-      headers: {
-        'Content-Type': "Application/json"
-      },
-      body: JSON.stringify({ token })
-    })
-    const data = await response.json();
-    localStorage.setItem(
-      "loggedUser",
-      JSON.stringify({
-        name: data.name,
-        email: data.email,
-        token: data.jwt
-      })
-    );
   }
   return (
     <div className="login-container">
@@ -86,7 +65,7 @@ const Login = () => {
           </button>
         </div>
         <h1 className="title">Welcome to <span><Link to="/" style={{ textDecoration: "none", color: "red" }}>HealthConnect</Link></span></h1>
-        
+
 
         <form className="login-form" onSubmit={handleSubmit}>
           <label>Email</label>

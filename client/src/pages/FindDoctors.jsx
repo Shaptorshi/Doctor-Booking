@@ -29,7 +29,7 @@ const FindDoctors = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/registerDoctor');
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/registerDoctor`);
         const data = await response.json();
         setDoctors(data);
       } catch (error) {
