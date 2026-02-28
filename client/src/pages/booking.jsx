@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./booking.css";
 
 const BookAppointment = () => {
@@ -67,7 +68,8 @@ const BookAppointment = () => {
           date_time: "",
         });
         setTimeout(() => {
-          window.location.href = "/appointments"
+          const navigate = useNavigate();
+          navigate('/appointments');
         }, 1000);
       } else {
         alert(data.message || "Failed to book appointment.");
