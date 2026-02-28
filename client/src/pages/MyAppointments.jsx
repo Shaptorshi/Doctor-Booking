@@ -136,7 +136,7 @@ const MyAppointments = () => {
                   <p>
                     <strong style={{ marginRight: "5px" }}>Reason:</strong> {appt.visitReason}
                   </p>
-                  {appt.status==="Booked"?<button className="cancel-btn" onClick={() => { handleCancel(appt._id) }}>Cancel</button>:""}
+                  {appt.status==="Booked" && new Date(appt.date_time)>new Date?<button className="cancel-btn" onClick={() => { handleCancel(appt._id) }}>Cancel</button>:""}
                 </div>
               ))}
             </div>
